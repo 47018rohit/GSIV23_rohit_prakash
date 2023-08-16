@@ -1,0 +1,28 @@
+#homeWrapper {
+    padding: 16px;
+}
+
+.card {
+    width: 200px;
+    height: 264px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px 0px #9b9b9b;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.moviePic {
+    width: 200px;
+    height: 200px;
+    background-color: #444;
+}
+
+.detailWrapper {
+    padding-inline: 4px;    
+}
+.titleWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding-block: 4px; 
+}

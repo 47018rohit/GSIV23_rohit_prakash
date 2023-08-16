@@ -1,0 +1,29 @@
+#detailWrapper{
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+}
+
+.detailPic{
+    min-width: 180px ;
+    min-height: 240px ;
+    background-color: blueviolet;
+}
+
+.details{
+    color: #4a4a4a;
+}
+.details>h1{
+    font-size: 24px;
+    font-weight: 600;
+    }
+.details>h1>span{
+    font-weight: 400;
+    color: #9b9b9b;
+}
+.details>h3 , p{
+    font-size: 20px;
+    font-weight: 400;
+}
