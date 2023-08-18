@@ -2,18 +2,22 @@ import { useState } from 'react'
 import { Search, Home, ArrowRightAlt } from "@mui/icons-material"
 import { Link } from "react-router-dom"
 import "./navbar.css"
+import useFetchData from '../custom/useFetchData'
 
 const Navbar = () => {
   const [search, setSearch] = useState('')
+  const apikey = import.meta.VITE_API_KEY
+  const url = `https://api.themoviedb.org/3/search/movie?query=${search}&page=1&api_key=${apikey}`
 
   const handleChange = (e) => {
     setSearch(e.target.value)
-
+    
   }
   const handleSubmit = () => {
-    console.log(search)
+    useFetchData(url)
     setSearch('')
   }
+    
 
   return (
     <nav id="navbar">

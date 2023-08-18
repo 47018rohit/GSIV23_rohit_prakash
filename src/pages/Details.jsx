@@ -1,15 +1,19 @@
-import React from 'react'
+import useDetails from "../custom/useDetails"
 import "./details.css"
 
 const Details = () => {
+  let detail = useDetails()
+
   return (
     <section id='detailWrapper'>
-      <section className='detailPic'></section>
+      <section className='detailPic'>
+        <img src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`} alt={detail.title} />
+      </section>
       <section className='details'>
-        <h1>Movie Title <span>(Rating)</span> </h1>
+        <h1>{detail.title}<span>(&#9733; {detail.vote_average})</span> </h1>
         <h3>Year | Length | Director</h3>
         <h3>Cast: Act1, act2 ... </h3>
-        <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt reiciendis, nesciunt eaque aliquid corporis explicabo quasi doloribus ex voluptatum quos molestias, possimus quod tempora voluptates tempore illum, error expedita eveniet hic sit ipsa commodi eum minima! Velit excepturi amet reprehenderit exercitationem dignissimos architecto perferendis!</p>
+        <p>{detail.overview}</p>
       </section>
     </section>
   )

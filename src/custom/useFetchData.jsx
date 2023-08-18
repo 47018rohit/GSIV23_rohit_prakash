@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setData } from '../store/dataStore'
+import { setData } from '../store/dataSlice'
 import axios from 'axios'
 
 const useFetchData = (url) => {
@@ -9,7 +9,7 @@ const useFetchData = (url) => {
 
     const fetchData = useCallback(async () => {
         try {
-            const response = await axios.get(url, { page: 1 })
+            const response = await axios.get(url)
             dispatch(setData(response.data.results))
         } catch (error) {
             console.log(error)

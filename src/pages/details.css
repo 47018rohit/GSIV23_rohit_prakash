@@ -9,9 +9,12 @@
 .detailPic{
     min-width: 180px ;
     min-height: 240px ;
-    background-color: blueviolet;
+    overflow: hidden;
 }
-
+.detailPic>img{
+    min-height: 240px;
+    min-width: 180px;
+}
 .details{
     color: #4a4a4a;
 }
